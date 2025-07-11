@@ -36,9 +36,9 @@ export class UsersController {
     examples: {
       exemplo_valido: {
         value: {
-          name: "Polina Lisboa",
-          email: "Lisbobo@gmail.com",
-          password: "Senha@187"
+          name: "João Silva",
+          email: "joao@exemplo.com",
+          password: "SenhaForte@123"
         }
       }
     }
