@@ -16,25 +16,13 @@ import { CreateLeadDto } from './dto/create-lead.dto';
 import { UpdateLeadDto } from './dto/update-lead.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { Request } from 'express';
-import { ApiTags, ApiBearerAuth, ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
 
-@ApiTags('Leads')
-@ApiBearerAuth()
 @Controller('v1/leads')
 @UseGuards(AuthGuard('jwt'))
 export class LeadsController {
   constructor(private readonly leadsService: LeadsService) {}
 
   @Post()
-  @ApiOperation({ summary: 'Cria um novo lead' })
-  @ApiResponse({
-    status: 201,
-    description: 'Lead criado com Sucesso',
-    type: CreateLeadDto,
-  })
-  @ApiResponse({ status: 401, description: 'Não Autorizado' })
-  @ApiResponse({ status: 422, description: 'Dados Inválidos'})
-  @ApiBody({ type: CreateLeadDto })
   @HttpCode(HttpStatus.CREATED)
   create(@Req() req: Request, @Body() createLeadDto: CreateLeadDto) {
     return this.leadsService.create(req.user.userId, createLeadDto);
