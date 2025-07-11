@@ -11,19 +11,6 @@
 - PostgreSQL 15+
 - Git
 
-### Instalação
-```bash
-git clone https://github.com/seu-usuario/studiomega-desafio-fullstack-seu-nome
-cd studiomega-desafio-fullstack-seu-nome
-npm install
-cp .env.example .env
-```
-# Configure suas variáveis no .env
-```bash
-npx prisma migrate dev
-npm start dev
-```
-
 ### Tecnologias Utilizadas
 <div align="left">
   <!-- NestJS -->
@@ -51,6 +38,19 @@ npm start dev
     <img src="https://img.shields.io/badge/Bcrypt-525252?style=for-the-badge&logo=bcrypt&logoColor=white" alt="Bcrypt">
   </a>
 </div>
+
+### Instalação
+```bash
+git clone https://github.com/seu-usuario/studiomega-desafio-fullstack-seu-nome
+cd studiomega-desafio-fullstack-seu-nome
+npm install
+cp .env.example .env
+```
+# Configure suas variáveis no .env
+```bash
+npx prisma migrate dev
+npm start dev
+```
 
 ### Testando a API
 Exemplo com cURL:
