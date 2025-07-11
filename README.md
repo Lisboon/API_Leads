@@ -21,7 +21,7 @@ cp .env.example .env
 # Configure suas variáveis no .env
 ```bash
 npx prisma migrate dev
-npm run start:dev
+npm start dev
 ```
 
 ### Tecnologias Utilizadas
@@ -51,3 +51,11 @@ npm run start:dev
     <img src="https://img.shields.io/badge/Bcrypt-525252?style=for-the-badge&logo=bcrypt&logoColor=white" alt="Bcrypt">
   </a>
 </div>
+
+### Testando a API
+Exemplo com cURL:
+1. Registrar usuário
+```curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Fulano","email":"fulano@exemplo.com","password":"senha123"}'
+```
