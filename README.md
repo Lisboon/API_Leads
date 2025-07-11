@@ -1,12 +1,7 @@
 # MeusLeads - Desafio FullStack Studiomega
 
-**Wendel Lisboa**  
-*11/07/2025*
-
-
 ## 🌍 API Online
 [![Deploy no Heroku](https://www.herokucdn.com/deploy/button.svg)](https://desafiostudiomega-2d925d8d0b86.herokuapp.com/)
-
 **Documentação Swagger:** [https://desafiostudiomega-2d925d8d0b86.herokuapp.com/api](https://desafiostudiomega-2d925d8d0b86.herokuapp.com/api)
 
 ### Pré-requisitos
@@ -25,4 +20,13 @@ cp .env.example .env
 # Configure suas variáveis no .env
 ```bash
 npx prisma migrate dev
-npm run start:dev```
+npm run start:dev
+```
+
+### Tecnologias
+- NestJS
+- Prisma
+- JWT
+- PostgreSQL
+- Bcrypt
+
