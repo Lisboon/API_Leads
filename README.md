@@ -9,6 +9,7 @@
 - npm 9+
 - PostgreSQL 15+
 - Git
+- Postman
 
 ### Tecnologias Utilizadas
 <div align="left">
