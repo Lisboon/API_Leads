@@ -19,8 +19,16 @@ export class UsersService {
   }
 
   async findOneByEmail(email: string) {
-    return this.prisma.user.findUnique({ where: { email } });
-  }
+  return this.prisma.user.findUnique({ 
+    where: { email },
+    select: {
+      id: true,
+      name: true,
+      email: true,
+      password: true 
+    }
+  });
+}
 
   async validateUser(email: string, password: string) {
     const user = await this.findOneByEmail(email);
