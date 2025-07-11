@@ -1,4 +1,4 @@
-import { IsString, IsOptional, IsNotEmpty } from 'class-validator';
+import { IsString, IsOptional, IsNotEmpty, IsUUID} from 'class-validator';
 
 export class CreateLeadDto {
   @IsString()
@@ -16,5 +16,9 @@ export class CreateLeadDto {
   @IsString()
   @IsOptional()
   message?: string;
+
+  @IsUUID()
+  @IsOptional() 
+  id?: string;
 }
 
