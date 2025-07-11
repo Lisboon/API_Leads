@@ -55,7 +55,37 @@ npm start dev
 ### Testando a API
 Exemplo com cURL:
 1. Registrar usuário
-```curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/users \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Fulano","email":"fulano@exemplo.com","password":"senha123"}'
 ```
+  curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Fulano","email":"email@exemplo.com","password":"senha@123"}'
+```
+2. Login (gera o token JWT)
+```
+curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/users/auth \
+  -H "Content-Type: application/json" \
+  -d '{"email":"email@exemplo.com","password":"senha@123"}'
+```
+3. Criar Lead (Autenticação necessária)
+````
+curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/leads \
+  -H "Authorization: Bearer <token_jwt>" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Lead 1","phone":"123456789","message":"Hello"}'
+````
+4. Listar Leads (Autenticação necessária)
+```
+curl -X GET https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/leads \
+  -H "Authorization: Bearer <token_jwt>"
+```
+5. Atualizar Leads (Autenticação necessária)
+```
+curl -X PATCH https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/leads/id 
+  -H "Authorization: Bearer <token_jwt>"
+```
+6. Deletar Leads (Autenticação necessária)
+```
+curl -X DELETE https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/leads/id
+  -H "Authorization: Bearer <token_jwt>"
+```
+
