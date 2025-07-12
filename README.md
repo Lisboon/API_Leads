@@ -58,7 +58,7 @@ Exemplo com cURL:
 ```
   curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/users \
   -H "Content-Type: application/json" \
-  -d '{"name":"Fulano","email":"email@exemplo.com","password":"senha@123"}'
+  -d '{"name":"Siclano Fulano","email":"email@exemplo.com","password":"senha@123"}'
 ```
 2. Login (gera o token JWT)
 ```
@@ -71,7 +71,7 @@ curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/users/auth 
 curl -X POST https://desafiostudiomega-2d925d8d0b86.herokuapp.com/v1/leads \
   -H "Authorization: Bearer <token_jwt>" \
   -H "Content-Type: application/json" \
-  -d '{"name":"Lead 1","phone":"123456789","message":"Hello"}'
+  -d '{"name":"Lead 1","phone":"123456789","message":"anotar"}'
 ````
 4. Listar Leads (Autenticação necessária)
 ```
